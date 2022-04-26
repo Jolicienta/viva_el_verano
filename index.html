@@ -20,7 +20,7 @@
           width="150" height="150" viewBox="0 0 420 420" style="enable-background:new 0 0 420 420;"
           xml:space="preserve">
           <g>
-            <polygon class="sol1" style="fill:#F5C525;" points="420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211
+            <polygon class="sun__rays" style="fill:#F5C525;" points="420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211
               256.724,414.779 210,380 163.276,414.779 136.236,363.211 79.055,374.184 77.073,315.986 20.762,301.144 44.226,247.858 0,210
               44.226,172.143 20.762,118.855 77.074,104.014 79.055,45.816 136.236,56.789 163.276,5.221 210,40 256.723,5.221 283.764,56.789
               340.945,45.816 342.927,104.014 399.238,118.856 375.774,172.142 	" />
@@ -28,12 +28,6 @@
           </g>
         </svg>
       </div>
-
-      <style media="screen">
-          .sol1 {
-
-          }
-      </style>
 
       <!-- CONTENIDO NO SVG -->
       <div class="beach__content">
@@ -65,12 +59,6 @@
         </svg>
       </div>
 
-      <style media="screen">
-          .color1 {
-              fill: rgb(236, 36, 240);
-          }
-      </style>
-
       <!-- SVG MUJER -->
       <div class="beach__people">
         <svg width="210" height="210" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -92,8 +80,8 @@
           <path class="cabello1"
             d="M116 140v32h30v-32c0-39.152 20.564-73.586 51.455-93.084A59.912 59.912 0 0 0 196 60c0 33.08 26.92 60 60 60V0c-77.196 0-140 62.804-140 140z"
             fill="#5B3227" />
-          <path d="M393 477v35H256l-50-40 50-40h92c24.81 0 45 20.19 45 45z" fill="#82CC56" />
-          <path d="M256 432v80H119v-35c0-24.81 20.19-45 45-45h92z" fill="#9CE072" />
+          <path class="vestido" d="M393 477v35H256l-50-40 50-40h92c24.81 0 45 20.19 45 45z" fill="#82CC56" />
+          <path class="vestido" d="M256 432v80H119v-35c0-24.81 20.19-45 45-45h92z" fill="#9CE072" />
           <path
             d="M158.15 142.5c6.08 10.53 5.04 23.22-1.62 32.5 6.66 9.28 7.7 21.97 1.62 32.5-6.09 10.53-17.59 15.98-28.96 14.85-4.71 10.41-15.17 17.65-27.34 17.65l-34.67-65 34.67-65c12.17 0 22.63 7.24 27.34 17.65 11.37-1.13 22.87 4.32 28.96 14.85z"
             fill="#FFD640" />
@@ -107,32 +95,9 @@
         </svg>
       </div>
 
-      <style media="screen">
-
-      .cabello1 {
-          fill: rgb(255, 157, 70);
-      }
-
-      .cabello2 {
-          fill: rgb(198, 95, 4);
-          transition: fill 3s;
-      }
-
-
-      .beach__people {
-          animation-name: moveToLeft;
-          animation-duration: 5s;
-          animation-timing-function: ease-in;
-          animation-delay: 5s;
-          animation-iteration-count: 7;
-          animation-direction: alternate;
-      }
-
-      </style>
-
       <!-- SVG PALMERA -->
       <div class="beach_palm-tree">
-        <svg width="159" height="159" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg">
+        <svg class="palmera" width="159" height="159" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg">
           <g>
             <path
               d="M30.34 17.966c-.114.009-.224.034-.34.034a3.963 3.963 0 0 1-2.52-.917c.319.57.52 1.215.52 1.917 0 .6-.1 1.164-.378 1.675C29.698 31.774 32.325 51.675 26 58h14s-.39-26.086-9.66-40.034z"
@@ -147,13 +112,12 @@
             <path
               d="M26 14c0-.33.051-.646.127-.953-2.019-1.85-7.016-2.771-12.271-1.362C7.454 13.4 3.103 17.918 3.818 20.586l10.142-2.718.931-2.32 1.967 1.544 4.737-1.269A3.957 3.957 0 0 1 24 15c.165 0 .322.029.482.049l1.581-.424A4.023 4.023 0 0 1 26 14z"
               fill="#4FBA6F" />
-            <path
+            <path class="coco_cae"
               d="M26.501 15.902A3.956 3.956 0 0 0 24 15a4 4 0 1 0 4 4c0-.692-.192-1.334-.501-1.902a3.986 3.986 0 0 1-.998-1.196z"
               fill="#7F6E5D" />
           </g>
         </svg>
       </div>
-
 
       <!-- SVG PELOTA DE PLAYA -->
       <div class="beach__ball">
@@ -175,21 +139,37 @@
       margin: 0;
     }
 
-    @keyframes showContent {
-        0% {top: 0px}
-        100% {bottom: 100px;}
-    }
+    /* ANIMACIONES USADAS */
 
+    /* ANIMACIÓN QUE HACE QUE EL ELEMENTO SE DESPLACE HACIA LA IZQUIERDA */
     @keyframes moveToLeft {
         0% {margin-right: 0;}
         100% {left: 500px;}
     }
-
+    /* ANIMACIÓN QUE HACE QUE EL ELEMENTO SE DESPLACE HACIA LA DERECHA */
     @keyframes moveToRight {
         0% {margin-left: 100px;}
         100% {right: 500px;}
     }
 
+    /* ANIMACIÓN QUE HACE QUE EL ELEMENTO APAREZCA DESDE ABAJO */
+    @keyframes showContentFromBottom {
+       0% {z-index: -100;}
+       20% {top: 0px;}
+       100% {bottom: 100px;}
+    }
+    /* ANIMACIÓN QUE HACE QUE EL ELEMENTO APAREZCA DESDE LA IZQUIERDA */
+    @keyframes showContentFromLeft {
+        0% {left: -1000px}
+        100% {left: 20px}
+    }
+    /* ANIMACIÓN QUE HACE QUE LOS RAYOS DE SOL CAMBIEN DE COLOR */
+    @keyframes sunyDay {
+    from {fill: rgb(238, 94, 41);}
+    to {fill: yellow;}
+    }
+
+    /* ESTILOS DEL BACKGROUND PARTE DE ARRIBA */
     .beach {
       display: flex;
       flex-direction: column;
@@ -197,6 +177,7 @@
       width: 100vw;
     }
 
+    /* CIELO */
     .beach__sky {
       align-items: center;
       background-color: #61C1E8;
@@ -206,16 +187,23 @@
       justify-content: flex-start;
       padding: 20px 150px 0;
     }
-
+    /* SOL */
     .beach__sun {
       width: 100%;
     }
 
+    .sun__rays {
+        animation-name: sunyDay;
+        animation-duration: 4s;
+    }
+
+    /* ESTILOS DEL RELATO */
     .beach__content {
+      position: relative;
       width: 100%;
       color: #FFF;
       font-family: monospace;
-      animation: showContent 2s linear;
+      animation: showContentFromLeft 2s linear;
     }
 
     .beach__title {
@@ -226,6 +214,8 @@
       font-size: 1rem;
     }
 
+    /* ESTILOS DEL BACKGROUND PARTE DE ABAJO */
+    /* ARENA */
     .beach__sand {
       align-items: flex-end;
       background-color: #F1EDD9;
@@ -235,7 +225,7 @@
       padding: 0 300px;
       position: relative;
     }
-
+    /* QUITASOL */
     .beach__sun-umbrella {
       animation: moveToRight 1s linear;
       left: 100px;
@@ -243,19 +233,40 @@
       top: 20px;
     }
 
+    .color1 {
+        fill: rgb(236, 36, 240);
+    }
+    /* MUJER */
     .beach__people {
       display: inline;
       z-index: 10;
     }
 
+    .cabello1 {
+        fill: rgb(255, 157, 70);
+    }
+
+    .cabello2 {
+        fill: rgb(233, 128, 35);
+        transition: fill 3s;
+    }
+
+    .vestido {
+        transition: fill 1s;
+    }
+
+    .vestido:hover {
+        fill: rgb(116, 9, 228);
+    }
+    /* PALMERA */
     .beach_palm-tree {
-      animation: showContent 2s linear;
+      animation: showContentFromBottom 2s linear;
       left: 55%;
       position: absolute;
       top: -100px;
       z-index: 8;
     }
-
+    /* PELOTA DE PLAYA */
     .beach__ball {
       animation: moveToLeft 1s linear;
       bottom: 102px;
